@@ -22,7 +22,7 @@ const get_job_urls = (pageSourceHTML) => {
     return JOBS;
 }
 
-app.get("/list_job_urls", async (req, res) => {
+app.get("/", async (req, res) => {
     const baseUrl = "https://www.upwork.com/nx/search/jobs";
 
     const allowedParams = [
