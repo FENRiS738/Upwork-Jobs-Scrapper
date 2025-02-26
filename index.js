@@ -75,8 +75,14 @@ const get_source_html = async (finalUrl) => {
     return htmlContent;
 }
 
+app.get('/', (req, res) => {
+    res.json({
+        success: true,
+        message: "Service is running properly..."
+    })
+});
 
-app.get("/", async (req, res) => {
+app.get("/jobs", async (req, res) => {
     const baseUrl = "https://www.upwork.com/nx/search/jobs";
 
     const allowedParams = [
